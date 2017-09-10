@@ -1,0 +1,60 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+
+<display-name>Archetype Created Web Application</display-name>
+
+<context-param>
+  <param-name>breed</param-name>
+  <param-value>Great Dane</param-value>
+</context-param>
+
+<servlet>
+  <servlet-name>ListenerTester</servlet-name>
+  <servlet-class>com.example.servlet.ContextListenerTester</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>ListenerTester</servlet-name>
+  <url-pattern>/ListenTest.do</url-pattern>
+</servlet-mapping>
+
+<servlet>
+  <servlet-name>ObjectBindingTester</servlet-name>
+  <servlet-class>com.example.servlet.EntityBindingTester</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>ObjectBindingTester</servlet-name>
+  <url-pattern>/ObjectBindingTest.do</url-pattern>
+</servlet-mapping>
+
+<servlet>
+  <servlet-name>SessionCounterTester</servlet-name>
+  <servlet-class>com.example.servlet.GlobalCounterTester</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>SessionCounterTester</servlet-name>
+  <url-pattern>/CounterTest.do</url-pattern>
+</servlet-mapping>
+
+<servlet>
+  <servlet-name>AttributeListenTester</servlet-name>
+  <servlet-class>com.example.servlet.AttributeListenerTester</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>AttributeListenTester</servlet-name>
+  <url-pattern>/AttributeListenerTest.do</url-pattern>
+</servlet-mapping>
+
+<listener>
+  <listener-class>com.example.listener.DogServletContextListener</listener-class>
+</listener>
+<listener>
+  <listener-class>com.example.listener.GlobalCounterListener</listener-class>
+</listener>
+<listener>
+  <listener-class>com.example.listener.DogSessionAttributeListener</listener-class>
+</listener>
+
+</web-app>
